@@ -1,0 +1,13 @@
+{
+  "id": "SwapRelicsAndCards",    
+  "name": "假如调换了所有的卡牌和遗物获取",
+  "author": "Tabris-ZX",
+  "description": "调换游戏中所有的卡牌和遗物获取(商店直购正常).默认关闭,按F7切换开关",
+  "version": "0.1.4",
+  "min_game_version": "0.107.1", 
+  "has_pck": false, 
+  "has_dll": true, 
+  "dependencies": [
+  ],
+  "affects_gameplay": true
+}
