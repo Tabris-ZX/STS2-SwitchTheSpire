@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <AssemblyName>SwapRelicsAndCards</AssemblyName>
+        <AssemblyName>SwitchTheSpire</AssemblyName>
         <TargetFramework>net9.0</TargetFramework>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-
+        <!-- 你设备的游戏路径,默认是作者的,如果要本地开发就改一下 -->
         <Sts2Dir>E:\SteamLibrary\steamapps\common\Slay the Spire 2</Sts2Dir>
         <Sts2DataDir>$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
     </PropertyGroup>

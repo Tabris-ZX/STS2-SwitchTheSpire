@@ -1,0 +1,13 @@
+{
+  "id": "SwitchTheSpire",    
+  "name": "互换尖塔",
+  "author": "Tabris-ZX",
+  "description": "支持调换游戏中卡牌/遗物/药水的获取.可将三者中的任意一种转换为另一种(商店直购不受影响). 按F7打开设置面板(支持热重载)",
+  "version": "0.2.2",
+  "min_game_version": "0.107.1", 
+  "has_pck": false, 
+  "has_dll": true, 
+  "dependencies": [
+  ],
+  "affects_gameplay": true
+}

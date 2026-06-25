@@ -4,12 +4,13 @@ using Godot;
 using MegaCrit.Sts2.Core.Modding;
 using MegaCrit.Sts2.Core.Nodes;
 
-namespace swapRelicsAndCards;
+namespace SwitchTheSpire;
 
+//注册
 [ModInitializer("Initialize")]
 internal static class Mod
 {
-    internal const string ModId = "SwapRelicsAndCards";
+    internal const string ModId = "SwitchTheSpire";
 
     internal static Config Config { get; set; } = Config.Default;
 
@@ -19,11 +20,10 @@ internal static class Mod
         var harmony = new Harmony(ModId);
         harmony.PatchAll(Assembly.GetExecutingAssembly());
 
-        // NGame._Input 走 Godot variant 分发，PatchAll 匹配不到，手动注册
-        var original = AccessTools.Method(typeof(NGame), "_Input", new[] { typeof(InputEvent) });
+        var original = AccessTools.Method(typeof(NGame), "_Input", [typeof(InputEvent)]);
         harmony.Patch(original,
-            postfix: new HarmonyMethod(typeof(NGameInputPatch), nameof(NGameInputPatch.OnInput)));
+            postfix: new HarmonyMethod(typeof(KeyPatch), nameof(KeyPatch.OnInput)));
 
-        Log.Info($"Initialized — enabled={Config.Enabled}");
+        Log.Info($"Initialized {Config.Enabled}");
     }
 }
