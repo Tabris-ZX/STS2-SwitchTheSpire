@@ -1,10 +1,11 @@
 
-# <center>SwitchTheSpire</center>
+# <div align="center">SwitchTheSpire</div>
 
-<center>
-<div>支持调换游戏中卡牌/遗物/药水的获取. 可将三者中的任意一种转换为另一种, 商店直购不受影响.</div>
-<img src="icon.png" width="180" height="180">
-</center>
+<div align="center">支持调换游戏中卡牌/遗物/药水的获取. 可将三者中的任意一种转换为另一种, 商店直购不受影响.</div>
+
+<div align="center">
+<img src = "icon.png" width = "180" height = "180"/>
+</div>
 
 
 ## 功能
