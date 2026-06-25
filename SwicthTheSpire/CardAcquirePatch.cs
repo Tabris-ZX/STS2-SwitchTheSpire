@@ -43,7 +43,7 @@ internal static class CardAcquirePatch
         if (newPileType != PileType.Deck) return true;
         if (card.Type == CardType.Curse) return true;
 
-        Log.Debug($"Card '{card.Id.Entry}' -> {Mod.Config.CardBecomes}");
+        Log.Debug($"卡牌 '{card.Id.Entry}' -> {Mod.Config.CardBecomes}");
 
         SwapGuard.Depth++;
         __result = GrantAsync(card);
@@ -60,19 +60,19 @@ internal static class CardAcquirePatch
                 case SwapTarget.Relic:
                     var relic = RelicFactory.PullNextRelicFromFront(owner).ToMutable();
                     await RelicCmd.Obtain(relic, owner);
-                    Log.Debug($"OK: card '{card.Id.Entry}' → relic '{relic.Id.Entry}'");
+                    Log.Debug($"完成: 卡牌 '{card.Id.Entry}' -> 遗物 '{relic.Id.Entry}'");
                     break;
                 case SwapTarget.Potion:
                     var reward = new PotionReward(owner);
                     reward.Populate();
                     await reward.SelectUnsynchronized();
-                    Log.Debug($"OK: card '{card.Id.Entry}' → potion");
+                    Log.Debug($"完成: 卡牌 '{card.Id.Entry}' -> 药水");
                     break;
             }
         }
         catch (Exception ex)
         {
-            Log.Error($"Card→{Mod.Config.CardBecomes} failed: {ex.Message}");
+            Log.Error($"卡牌->{Mod.Config.CardBecomes} 失败: {ex.Message}");
         }
         finally
         {

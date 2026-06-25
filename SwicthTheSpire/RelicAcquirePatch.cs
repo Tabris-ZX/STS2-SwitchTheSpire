@@ -35,7 +35,7 @@ internal static class RelicAcquirePatch
         if (SwapGuard.ShouldBypass(Mod.Config.RelicBecomes, player))
             return true;
 
-        Log.Debug($"Relic '{relic.Id.Entry}' → {Mod.Config.RelicBecomes}");
+        Log.Debug($"遗物 '{relic.Id.Entry}' -> {Mod.Config.RelicBecomes}");
 
         SwapGuard.Depth++;
         __result = GrantAsync(relic, player);
@@ -56,19 +56,19 @@ internal static class RelicAcquirePatch
                     var cardReward = new CardReward(options, 3, player);
                     cardReward.Populate();
                     await cardReward.SelectUnsynchronized();
-                    Log.Debug($"OK: relic '{relic.Id.Entry}' → card");
+                    Log.Debug($"完成: 遗物 '{relic.Id.Entry}' -> 卡牌");
                     break;
                 case SwapTarget.Potion:
                     var potionReward = new PotionReward(player);
                     potionReward.Populate();
                     await potionReward.SelectUnsynchronized();
-                    Log.Debug($"OK: relic '{relic.Id.Entry}' → potion");
+                    Log.Debug($"完成: 遗物 '{relic.Id.Entry}' -> 药水");
                     break;
             }
         }
         catch (Exception ex)
         {
-            Log.Error($"Relic→{Mod.Config.RelicBecomes} failed: {ex.Message}");
+            Log.Error($"遗物->{Mod.Config.RelicBecomes} 失败: {ex.Message}");
         }
         finally
         {

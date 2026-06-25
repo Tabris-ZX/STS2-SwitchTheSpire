@@ -86,7 +86,7 @@ internal sealed class Config
         }
         catch (Exception ex)
         {
-            Log.Error($"Failed to save config: {ex.Message}");
+            Log.Error($"保存配置失败: {ex.Message}");
         }
     }
 }

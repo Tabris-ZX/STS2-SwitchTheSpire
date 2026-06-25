@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="icon.png" width="300" height="300"/>
+  <img src="icon.png" width="360" height="360"/>
 </div>
 
-# <div align="center">SwitchTheSpire</div>
+# <div align="center">Switch the Spire</div>
 
 <div align="center">
   <b>自由调整游戏中的奖励类型</b><br>

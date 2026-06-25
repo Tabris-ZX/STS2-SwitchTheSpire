@@ -24,6 +24,6 @@ internal static class Mod
         harmony.Patch(original,
             postfix: new HarmonyMethod(typeof(KeyPatch), nameof(KeyPatch.OnInput)));
 
-        Log.Info($"Initialized {Config.Enabled}");
+        Log.Info($"初始化完成, enabled={Config.Enabled}");
     }
 }

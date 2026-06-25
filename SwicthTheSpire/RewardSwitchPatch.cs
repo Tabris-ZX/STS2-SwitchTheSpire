@@ -26,7 +26,7 @@ internal static class RewardSwapPatch
         }
         catch (Exception ex)
         {
-            Log.Error($"Swap rewards failed: {ex.Message}");
+            Log.Error($"奖励互换失败: {ex.Message}");
         }
     }
 
@@ -57,7 +57,7 @@ internal static class RewardSwapPatch
                 continue;
 
             rewardsSet.Rewards[i] = CreateReward(target.Value, player, room);
-            Log.Info($"{reward.GetType().Name} → {target} at index {i}");
+            Log.Info($"{reward.GetType().Name} -> {target}, index={i}");
         }
     }
 
